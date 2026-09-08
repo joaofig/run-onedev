@@ -16,9 +16,11 @@ def main():
     download_file("https://code.onedev.io/onedev/server/~site/onedev-latest.tar.gz",
                   "onedev-latest.tar.gz")
 
+    print("Extracting onedev-latest.tar.gz")
     with tarfile.open("onedev-latest.tar.gz", "r:gz") as tar:
         tar.extractall(path="onedev")
 
+    print("Removing onedev-latest.tar.gz")
     os.remove("onedev-latest.tar.gz")
 
 
