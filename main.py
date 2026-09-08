@@ -1,0 +1,26 @@
+import os
+import requests
+import tarfile
+
+
+def download_file(url: str, file_name: str):
+    response = requests.get(url)
+
+    with open(file_name, 'wb') as file:
+        file.write(response.content)
+
+
+def main():
+    print("Downloading onedev-latest.tar.gz")
+    # Example usage
+    download_file("https://code.onedev.io/onedev/server/~site/onedev-latest.tar.gz",
+                  "onedev-latest.tar.gz")
+
+    with tarfile.open("onedev-latest.tar.gz", "r:gz") as tar:
+        tar.extractall(path="onedev")
+
+    os.remove("onedev-latest.tar.gz")
+
+
+if __name__ == "__main__":
+    main()
