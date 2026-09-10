@@ -27,7 +27,7 @@ def main():
 
     print("Launching OneDev...")
     subprocess.run(["chmod", "+x", "./start.sh"])
-    subprocess.run(["sh", "./start.sh"], shell=True)
+    subprocess.run(["./start.sh"])
 
 
 if __name__ == "__main__":
