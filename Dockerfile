@@ -15,8 +15,10 @@ RUN sudo apt-get -y install openjdk-17-jdk
 
 ENV JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64/"
 
-RUN uv run python main.py
-WORKDIR /onedev
-RUN chmod +x bin/server.sh
+#RUN uv run python main.py
+#WORKDIR /onedev
+#RUN chmod +x bin/server.sh
+#
+#CMD ["./bin/server.sh"]
 
-CMD ["./bin/server.sh"]
+CMD ["uv", "run", "python", "main"]

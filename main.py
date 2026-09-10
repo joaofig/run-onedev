@@ -1,6 +1,7 @@
 import os
 import requests
 import tarfile
+import subprocess
 
 
 def download_file(url: str, file_name: str):
@@ -23,6 +24,9 @@ def main():
     print("Removing onedev-latest.tar.gz")
     os.remove("onedev-latest.tar.gz")
     print("Done!")
+
+    print("Launching OneDev...")
+    subprocess.call(["sh", "./onedev/bin/server.sh"])
 
 
 if __name__ == "__main__":
