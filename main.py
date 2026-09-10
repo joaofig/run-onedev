@@ -19,16 +19,15 @@ def main():
 
     print("Extracting onedev-latest.tar.gz")
     with tarfile.open("onedev-latest.tar.gz", "r:gz") as tar:
-        tar.extractall(path="./onedev")
+        tar.extractall(path=".")
 
     print("Removing onedev-latest.tar.gz")
     os.remove("onedev-latest.tar.gz")
     print("Done!")
 
     print("Launching OneDev...")
-    subprocess.run(["ls", "-al", "onedev"])
-    subprocess.run(["chmod", "+x", "./onedev/bin/server.sh"])
-    subprocess.run(["./onedev/bin/server.sh"])
+    subprocess.run(["chmod", "+x", "./onedev-latest/bin/server.sh"])
+    subprocess.run(["./onedev-latest/bin/server.sh"])
 
 
 if __name__ == "__main__":
