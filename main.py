@@ -22,6 +22,7 @@ def main():
 
     print("Removing onedev-latest.tar.gz")
     os.remove("onedev-latest.tar.gz")
+    print("Done!")
 
 
 if __name__ == "__main__":
