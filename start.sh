@@ -1,3 +1,4 @@
 cd onedev-latest || exit
 chmod +x ./bin/server.sh
-./bin/server.sh console
+java --version
+sh ./bin/server.sh console
