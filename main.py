@@ -25,9 +25,9 @@ def main():
     os.remove("onedev-latest.tar.gz")
     print("Done!")
 
-    print("Launching OneDev...")
-    subprocess.run(["chmod", "+x", "./onedev-latest/bin/server.sh"])
-    subprocess.run(["./onedev-latest/bin/server.sh", "console"])
+    # print("Launching OneDev...")
+    # subprocess.run(["chmod", "+x", "./onedev-latest/bin/server.sh"])
+    # subprocess.run(["./onedev-latest/bin/server.sh", "console"])
 
 
 if __name__ == "__main__":
