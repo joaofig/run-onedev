@@ -1,4 +1,4 @@
-FROM amazoncorretto:17.0.20-al2
+FROM dhi.io/amazoncorretto:21
 LABEL authors="joaofig"
 
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
