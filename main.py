@@ -26,7 +26,7 @@ def main():
     print("Done!")
 
     print("Launching OneDev...")
-    subprocess.run(["ls", "-al"])
+    subprocess.run(["ls", "-al", "onedev"])
     subprocess.run(["chmod", "+x", "./onedev/bin/server.sh"])
     subprocess.run(["./onedev/bin/server.sh"])
 
