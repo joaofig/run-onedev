@@ -12,7 +12,4 @@ ENV PORT=8080
 COPY . .
 RUN uv sync --no-dev
 RUN uv run python main.py
-WORKDIR /onedev-latest
-RUN chmod +x ./bin/server.sh
-CMD ["./bin/server.sh", "console"]
 
