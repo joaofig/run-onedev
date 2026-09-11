@@ -15,6 +15,5 @@ ENV PORT=6610
 EXPOSE 6610
 
 COPY . .
-WORKDIR /onedev-latest
 RUN /root/.local/bin/uv sync --no-dev --no-sources;
 CMD ["/root/.local/bin/uv", "run", "python", "main.py"]
