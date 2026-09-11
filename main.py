@@ -21,8 +21,6 @@ def main():
     with tarfile.open("onedev-latest.tar.gz", "r:gz") as tar:
         tar.extractall(path=".")
 
-    print("Removing onedev-latest.tar.gz")
-    os.remove("onedev-latest.tar.gz")
     print("Done!")
 
     print("Launching OneDev...")
