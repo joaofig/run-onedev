@@ -2,8 +2,8 @@ import subprocess
 
 
 def main():
-    subprocess.run(["chmod", "+x", "./bin/server.sh"])
-    subprocess.run(["source", "./bin/server.sh", "console"])
+    subprocess.call(["chmod", "+x", "./bin/server.sh"])
+    subprocess.call(["sh", "./bin/server.sh", "console"])
 
 
 if __name__ == "__main__":
