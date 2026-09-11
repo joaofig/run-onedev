@@ -1,7 +1,6 @@
-FROM amazoncorretto:21
+FROM openjdk:17-oracle
 LABEL authors="joaofig"
 
-RUN yum install -y tar gzip
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 RUN source $HOME/.local/bin/env
 
