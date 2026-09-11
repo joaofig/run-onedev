@@ -28,7 +28,7 @@ def main():
     print("Launching OneDev...")
     subprocess.run(["pwd"])
     subprocess.run(["ls", "-al"])
-    subprocess.run(["./bin/server.sh", "console"])
+    subprocess.run(["./onedev-latest/bin/server.sh", "console"])
 
 
 if __name__ == "__main__":
