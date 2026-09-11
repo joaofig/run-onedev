@@ -14,7 +14,6 @@ EXPOSE 6610
 
 COPY . .
 RUN /root/.local/bin/uv sync --no-dev --no-sources;
-RUN ["/root/.local/bin/uv", "run", "python", "get_onedev.py"]
-WORKDIR /app/onedev-latest
+WORKDIR /onedev-latest
 RUN chmod +x ./bin/server.sh
-RUN ["/root/.local/bin/uv", "run", "python", "main.py"]
+RUN ["/root/.local/bin/uv", "run", "python", "/app/main.py"]
