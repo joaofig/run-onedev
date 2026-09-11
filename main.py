@@ -26,9 +26,10 @@ def main():
     print("Done!")
 
     print("Launching OneDev...")
-    subprocess.run(["echo", "$PATH"], shell=True)
-    subprocess.run(["ls", "-al"])
-    subprocess.run(["./onedev-latest/bin/server.sh", "console"])
+    # subprocess.run(["echo", "$PATH"], shell=True)
+    # subprocess.run(["ls", "-al"])
+    subprocess.run(["./onedev-latest/bin/server.sh", "console"],
+                   env={"PATH": "/usr/java/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"})
 
 
 if __name__ == "__main__":

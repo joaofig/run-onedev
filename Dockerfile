@@ -1,4 +1,4 @@
-FROM openjdk:17-oracle
+FROM openjdk:17.0.2-oracle
 LABEL authors="joaofig"
 
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -16,5 +16,4 @@ COPY . .
 RUN /root/.local/bin/uv sync --no-dev --no-sources;
 WORKDIR /onedev-latest
 RUN chmod +x ./bin/server.sh
-RUN echo $PATH
 CMD ["/root/.local/bin/uv", "run", "python", "/app/main.py"]
