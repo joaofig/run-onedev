@@ -12,22 +12,22 @@ def download_file(url: str, file_name: str):
 
 
 def main():
-    # print("Downloading onedev-latest.tar.gz")
-    # # Example usage
-    # download_file("https://code.onedev.io/onedev/server/~site/onedev-latest.tar.gz",
-    #               "onedev-latest.tar.gz")
-    #
-    # print("Extracting onedev-latest.tar.gz")
-    # with tarfile.open("onedev-latest.tar.gz", "r:gz") as tar:
-    #     tar.extractall(path=".")
-    #
-    # print("Removing onedev-latest.tar.gz")
-    # os.remove("onedev-latest.tar.gz")
-    # print("Done!")
+    print("Downloading onedev-latest.tar.gz")
+    # Example usage
+    download_file("https://code.onedev.io/onedev/server/~site/onedev-latest.tar.gz",
+                  "onedev-latest.tar.gz")
+
+    print("Extracting onedev-latest.tar.gz")
+    with tarfile.open("onedev-latest.tar.gz", "r:gz") as tar:
+        tar.extractall(path=".")
+
+    print("Removing onedev-latest.tar.gz")
+    os.remove("onedev-latest.tar.gz")
+    print("Done!")
 
     print("Launching OneDev...")
     # subprocess.run(["chmod", "+x", "./bin/server.sh"])
-    subprocess.run(["sh", "./start.sh"])
+    # subprocess.run(["sh", "./start.sh"])
 
 
 if __name__ == "__main__":

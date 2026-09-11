@@ -1,7 +1,6 @@
 FROM amazoncorretto:21
 LABEL authors="joaofig"
 
-RUN java --version
 RUN yum install -y tar gzip
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 RUN source $HOME/.local/bin/env
@@ -15,6 +14,8 @@ ENV PORT=6610
 EXPOSE 6610
 
 COPY . .
-RUN chmod +x ./start.sh
 RUN /root/.local/bin/uv sync --no-dev --no-sources;
-CMD ["/root/.local/bin/uv", "run", "python", "main.py"]
+RUN ["/root/.local/bin/uv", "run", "python", "main.py"]
+WORKDIR /onedev-latest
+RUN chmod +x ./bin/server.sh
+CMD ["./bin/server.sh", "console"]
