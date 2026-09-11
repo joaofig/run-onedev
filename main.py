@@ -26,7 +26,7 @@ def main():
     print("Done!")
 
     print("Launching OneDev...")
-    subprocess.run(["pwd"])
+    subprocess.run(["echo", "$PATH"])
     subprocess.run(["ls", "-al"])
     subprocess.run(["./onedev-latest/bin/server.sh", "console"])
 
