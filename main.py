@@ -26,7 +26,7 @@ def main():
     print("Launching OneDev...")
     # subprocess.run(["echo", "$PATH"], shell=True)
     # subprocess.run(["ls", "-al"])
-    subprocess.run(["sh", "./onedev-latest/bin/server.sh", "console"],
+    subprocess.run(["./onedev-latest/bin/server.sh", "console"],
                    env={
                        "PATH": "/usr/java/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
                        "PORT": "6610"
