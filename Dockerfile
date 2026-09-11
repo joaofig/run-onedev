@@ -16,4 +16,5 @@ COPY . .
 RUN /root/.local/bin/uv sync --no-dev --no-sources;
 WORKDIR /onedev-latest
 RUN chmod +x ./bin/server.sh
-RUN ["/root/.local/bin/uv", "run", "python", "/app/main.py"]
+RUN echo $PATH
+CMD ["/root/.local/bin/uv", "run", "python", "/app/main.py"]
