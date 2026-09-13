@@ -1,7 +1,7 @@
 curl -LsSf https://astral.sh/uv/install.sh | sh
 source "$HOME"/.local/bin/env
 
-/usr/bin/sudo apt install util-linux
+apt -y install util-linux
 
 uv sync --no-dev --no-sources
 uv run python main.py
