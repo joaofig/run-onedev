@@ -10,3 +10,8 @@ requires-python = ">=3.13"
 dependencies = [
     "requests>=2.34.2",
 ]
+
+[dependency-groups]
+dev = [
+    "honcho>=2.0.0",
+]
