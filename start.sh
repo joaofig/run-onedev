@@ -1,7 +1,7 @@
 curl -LsSf https://astral.sh/uv/install.sh | sh
 source "$HOME"/.local/bin/env
 
-apt -y install util-linux
+sudo apt install openjdk-17-jre-headless
 
 uv sync --no-dev --no-sources
 uv run python main.py

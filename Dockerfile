@@ -1,5 +1,7 @@
-FROM mcr.microsoft.com/openjdk/jdk:21-ubuntu
+FROM ubuntu:latest
 LABEL authors="joaofig"
+
+RUN sudo apt install openjdk-17-jre-headless
 
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 RUN source $HOME/.local/bin/env
