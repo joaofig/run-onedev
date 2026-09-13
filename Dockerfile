@@ -15,4 +15,4 @@ EXPOSE 6610
 COPY . .
 RUN /root/.local/bin/uv sync --no-dev --no-sources;
 RUN chmod +x ./bin/server.sh
-CMD ["/root/.local/bin/uv", "run", "python", "/app/main.py"]
+CMD ["bash", "./start.sh"]
