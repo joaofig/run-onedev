@@ -13,6 +13,7 @@ ENV PORT=6610
 EXPOSE 6610
 
 COPY . .
+RUN apt install util-linux
 RUN /root/.local/bin/uv sync --no-dev --no-sources;
 RUN chmod +x ./bin/server.sh
 CMD ["bash", "./start.sh"]
