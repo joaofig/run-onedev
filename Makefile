@@ -9,3 +9,7 @@ podman-run:
 
 podman-build:
 	podman build --tag onedev-server .
+
+
+honcho:
+	uvx honcho start
