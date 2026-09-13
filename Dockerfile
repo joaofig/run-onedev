@@ -1,4 +1,4 @@
-FROM openjdk:17.0.2-oracle
+FROM mcr.microsoft.com/openjdk/jdk:21-ubuntu
 LABEL authors="joaofig"
 
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
